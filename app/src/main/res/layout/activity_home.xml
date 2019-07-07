@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#446c6868"
+    tools:context=".View.HomeActivity">
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome"
+        android:textColor="#435454"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:srcCompat="@drawable/checked"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:onClick="refresh"
+        android:paddingTop="7dp"
+        android:paddingBottom="5dp"
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic_refresh_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerEmp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_refresh"
+        android:background="#44999999"
+    android:visibility="visible"></android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_exit"
+        tools:ignore="VectorDrawableCompat" />
+
+</RelativeLayout>
